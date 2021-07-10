@@ -1,2 +1,7 @@
 *.env
 *datasets
+*emotion_model_1
+*emotion_model_2
+*emotion_model_3
+*emotion_model_4
+*api
