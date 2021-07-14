@@ -371,6 +371,34 @@
     background: url('https://bernardmarr.com/img/What%20Is%20The%20Importance%20Of%20Artificial%20Intelligence%20(AI).png') no-repeat;
     background-size: cover;
   }
+
+  .main__img--profiles {
+    border-radius: 50%;
+    margin: 10px;
+    height: 150px;
+    width: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #fff;
+    background: url('images/IMG_4201.JPG') no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+  
+  .main__img--profiles1 {
+    border-radius: 50%;
+    margin: 10px;
+    height: 150px;
+    width: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #fff;
+    background: url('images/Jay Picture.jpeg') no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
   
   .fa-layer-group,
   .fa-users {
