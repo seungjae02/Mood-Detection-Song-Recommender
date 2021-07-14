@@ -16,6 +16,7 @@ import random
 
 app = Flask(__name__)
 prediction = "None"
+
 model = keras.models.load_model('../emotion_model_5')
 
 def camera():
@@ -60,20 +61,11 @@ def gen(camera):
 
         if data is not None:
             frame = data[0]
-
             yield(b'--frame\r\n'
                 b'Content-Type: image/jpeg\r\n\r\n' + frame + b'\r\n\r\n')
         else:
-            continue
-        
-        final_image = data[1]
-
-        if final_image is not None:
-            Predictions = model.predict(final_image)
-            label_to_text = {0:'anger', 1:'disgust', 2:'fear', 3:'happiness', 4: 'sadness', 5: 'surprise', 6: 'neutral'} 
-            prediction = label_to_text[np.argmax(Predictions)]
-            print(prediction)
-
+            continue  
+            
 @app.route("/")
 def home():
     return render_template('app.html')

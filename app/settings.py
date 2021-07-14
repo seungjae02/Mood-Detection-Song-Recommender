@@ -1,0 +1,1 @@
+SPOTIFY_GREEN = (30, 215, 96)
