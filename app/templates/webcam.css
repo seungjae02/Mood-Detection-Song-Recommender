@@ -1,0 +1,9 @@
+.h1 {
+    text-align: center;
+}
+
+.webcam {
+    justify-content: center;
+    display: flex;
+    margin-top: 30px;
+}
