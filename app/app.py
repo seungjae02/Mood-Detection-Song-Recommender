@@ -17,45 +17,25 @@ import random
 # Modules
 from emotion import EmotionModel
 
+# Create model object
 model = EmotionModel('../emotion_model_5')
 model.import_model()
 
 app = Flask(__name__)
-prediction = "None"
+prediction = ""
 
 def camera():
     cap=cv2.VideoCapture(0)
 
-    font_scale = 1.5
-    font = cv2.FONT_HERSHEY_PLAIN
-
-    rectangle_bgr = (255,255,255)
-    img = np.zeros((500,500))
-    text = "Some text in a box!"
-    (text_width, text_height) = cv2.getTextSize(text, font, fontScale=font_scale, thickness=1)[0]
-    
-    text_offset_x = 10
-    text_offset_y = img.shape[0] - 25
-
-    box_coords = ((text_offset_x, text_offset_y), (text_offset_x + text_width + 2, text_offset_y - text_height - 2))
-    cv2.rectangle(img, box_coords[0], box_coords[1], rectangle_bgr, cv2.FILLED)
-    cv2.putText(img, text, (text_offset_x, text_offset_y), font, fontScale=font_scale, color=(0, 0, 0), thickness=1)
-    
     while True:
-        ret,img=cap.read()
+        ret, img = cap.read()
         img=cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)
         cv2.imwrite("static/cam.png",img)
 
-        # return render_template("camera.html",result=)
         return json.dumps({'status': 'OK', 'result': "static/cam.png"})
-        if cv2.waitKey(0) & 0xFF ==ord('q'):
+        if cv2.waitKey(0) & 0xFF == ord('q'):
             break
     cap.release()
-    # file="/home/ashish/Downloads/THOUGHT.png"
-    # with open(file,'rb') as file:
-    #     image=base64.encodebytes(file.read())
-    #     print(type(image))
-    # return json.dumps({'status': 'OK', 'user': user, 'pass': password});
     return json.dumps({'status': 'OK', 'result': "static/cam.png"})
 
 def gen(camera):
