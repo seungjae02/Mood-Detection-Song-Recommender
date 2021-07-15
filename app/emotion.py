@@ -15,6 +15,3 @@ class EmotionModel():
 
     def import_model(self):
         self.model = keras.models.load_model(self.dir)
-
-model = EmotionModel('../emotion_model_5')
-model.import_model()

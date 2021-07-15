@@ -2,18 +2,16 @@ import cv2
 from imutils.video import WebcamVideoStream
 import time
 import numpy as np
-from emotion import model
 from settings import *
 
 class VideoCamera(object):
     def __init__(self):
         self.stream = WebcamVideoStream(src=0).start()
-        self.model = model
 
     def __del__(self):
         self.stream.stop()
 
-    def get_frame(self):
+    def get_frame(self, model):
         image = self.stream.read()
         #time.sleep(1)
         #image = cv2.imread('../happyasian2.jpeg')
