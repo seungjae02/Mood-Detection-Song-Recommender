@@ -14,10 +14,14 @@ import matplotlib.pyplot as plt
 import numpy as np
 import random
 
+# Modules
+from emotion import EmotionModel
+
+model = EmotionModel('../emotion_model_5')
+model.import_model()
+
 app = Flask(__name__)
 prediction = "None"
-
-model = keras.models.load_model('../emotion_model_5')
 
 def camera():
     cap=cv2.VideoCapture(0)
@@ -43,7 +47,6 @@ def camera():
         cv2.imwrite("static/cam.png",img)
 
         # return render_template("camera.html",result=)
-        time.sleep(0.1)
         return json.dumps({'status': 'OK', 'result': "static/cam.png"})
         if cv2.waitKey(0) & 0xFF ==ord('q'):
             break
@@ -57,7 +60,7 @@ def camera():
 
 def gen(camera):
     while True:
-        data = camera.get_frame()
+        data = camera.get_frame(model)
 
         if data is not None:
             frame = data[0]
