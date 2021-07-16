@@ -381,7 +381,7 @@
     flex-direction: column;
     justify-content: center;
     color: #fff;
-    background: url('images/IMG_4201.JPG') no-repeat;
+    background: url('static/IMG_4201.JPG') no-repeat;
     background-position: center;
     background-size: cover;
   }
@@ -395,7 +395,7 @@
     flex-direction: column;
     justify-content: center;
     color: #fff;
-    background: url('images/Jay Picture.jpeg') no-repeat;
+    background: url('static/Jay Picture.jpeg') no-repeat;
     background-position: center;
     background-size: cover;
   }
