@@ -10,6 +10,7 @@
     text-decoration: none;
     color: inherit;
   }
+  
   .navbar {
     background: #bbbbbb;
     height: 80px;
@@ -314,9 +315,9 @@
   
   .main__btn {
     font-size: 1.8rem;
-    background: #f12711;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #f5af19, #f12711);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #f5af19, #f12711); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */     
+    background: #a8ff78;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #78ffd6, #a8ff78);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #78ffd6, #a8ff78); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */     
     padding: 20px 60px;
     border: none;
     border-radius: 4px;
@@ -330,7 +331,7 @@
   .main__btn a {
     position: relative;
     z-index: 2;
-    color: #fff;
+    color: rgb(0, 0, 0);
     text-decoration: none;
   }
   
@@ -341,7 +342,7 @@
     left: 0;
     width: 0;
     height: 100%;
-    background: #f5af19;
+    background: #78fff8;
     transition: all 0.35s;
     border-radius: 4px;
   }
@@ -481,210 +482,6 @@
     }
   }
   
-  /* Projects Section */
-  .projects {
-    background: #202020;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    padding: 5rem 0;
-  }
-  
-  .overlay {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 100%;
-    width: 100%;
-    opacity: 0;
-    transition: .5s ease;
-    background-color: #ffffff;
-  }
-  
-  .projects h1 {
-    background: #f5af19; 
-    background-size: 100%;
-    -webkit-background-clip: text;
-    -moz-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    -moz-text-fill-color: transparent;
-    margin-bottom: 5rem;
-    font-size: 2.5rem;
-  }
-  
-  .projects__wrapper {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr;
-  }
-  
-  .projects__card {
-    margin: 10px;
-    height: 425px;
-    width: 300px;
-    border-radius: 4px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    background-image: url('https://www.clipartkey.com/mpngs/m/21-216445_compass-computer-icons-rose-plant-flower-transparent-transparent.png');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    position: relative;
-    transition: 0.3s ease-in;
-  }
-  
-  .projects__text{
-    color: rgb(255, 255, 255);
-    opacity: 0;
-  }
-  
-  .projects__card:nth-child(2) {
-    background-image: url('images/Screenshot 2021-01-21 at 12.40.32 PM.png');
-    background-repeat: no-repeat;
-    background-position: center; 
-    position: relative;
-  }
-  
-  .projects__card:nth-child(3) {
-    background-image: url('https://www.kindpng.com/picc/m/466-4661766_web-design-and-website-development-icon-web-design.png');
-    background-repeat: no-repeat;
-    background-position: center; 
-    position: relative;
-    ;
-  }
-  
-  .projects__card:nth-child(4) {
-    background-image: url('https://imgs.michaels.com/MAM/assets/1/726D45CA1C364650A39CD1B336F03305/img/98D9F01F9D524A8FA793C47C21DDCE09/28181_30881_1.jpg?fit=inside|540:540');
-    background-repeat: no-repeat;
-    background-position: center; 
-    position: relative;
-    ;
-  }
-  
-  .projects__card h2 {
-    text-align: center;
-  }
-  
-  .projects__card p {
-    text-align: center;
-    margin-top: 24px;
-    font-size: 20px;
-  }
-  
-  .projects__btn {
-    display: flex;
-    justify-content: center;
-    margin-top: 16px;
-  }
-  
-  .projects__card button {
-    color: #fff;
-    padding: 14px 24px;
-    border: none;
-    outline: none;
-    border-radius: 4px;
-    background: #131313;
-    font-size: 1rem;
-  }
-  
-  .projects__card button:hover {
-    cursor: pointer;
-  }
-  
-  .projects__card:hover {
-    transform: scale(1.075);
-    transition: 0.3s ease-in;
-    cursor: pointer;
-    background: #FF8008;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #FFC837, #FF8008);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #FFC837, #FF8008); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */  
-  }
-  
-  .projects__card:hover .projects__text{
-    opacity: 1;
-    transition: 0.5s ease-in;
-  }
-  
-  @media screen and (max-width: 1300px) {
-    .projects__wrapper {
-      grid-template-columns: 1fr 1fr;
-    }
-  }
-  
-  @media screen and (max-width: 768px) {
-    .projects__wrapper {
-      grid-template-columns: 1fr;
-    }
-  }
-  
-  
-  /* Style inputs */
-  input[type=text], select, textarea {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #ccc;
-    margin-top: 6px;
-    margin-bottom: 16px;
-    resize: vertical;
-  }
-  
-  input[type=submit] {
-    background-color: #f17611;
-    color: white;
-    padding: 12px 20px;
-    border: none;
-    cursor: pointer;
-  }
-  
-  input[type=submit]:hover {
-    background-color: #f5af19;
-  }
-  
-  /* Create two columns that float next to eachother */
-  .column {
-    float: left;
-    width: 50%;
-    margin-top: 6px;
-    padding: 20px;
-  }
-  
-  /* Clear floats after the columns */
-  .row:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-  
-  .labelling{
-    font-size: medium;
-    color: white;
-  }
-  
-  
-  /* Responsive layout - when the screen is less than 2000px wide, make the two columns stack on top of each other instead of next to each other */
-  @media screen and (max-width: 2000px) {
-    .column, input[type=submit] {
-      width: 100%;
-      margin-top: 0;
-    }
-  }
-  
-  .name-box{
-    width: 400px;
-  }
-  
-  .email-box{
-    width: 400px;
-  }
-  
-  .label{
-    color:#da7c3e
-  }
   
   
   
