@@ -199,7 +199,7 @@
   
   /* Hero Section */
   .hero {
-    background: #e4e4e4;  /* fallback for old browsers */
+    background-image: #e4e4e4;  /* fallback for old browsers */
   }
   
   .hero__container {
@@ -219,13 +219,11 @@
   .hero__heading {
     font-size: 100px;
     margin-bottom: 24px;
-    color: #fff;
+    color: #000000;
   }
   
   .hero__heading span {
-    background: #f12711;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #f5af19, #f12711);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #f5af19, #f12711); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */  
+    background: #000000; 
     background-size: 100%;
     -webkit-background-clip: text;
     -moz-background-clip: text;
@@ -235,9 +233,7 @@
   
   .hero__description {
     font-size: 60px;
-    background: #f12711;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #f5af19, #f16b11);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #f5af19, #f16b11); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */    
+  
     background-size: 100%;
     -webkit-background-clip: text;
     -moz-background-clip: text;
@@ -245,9 +241,6 @@
     -moz-text-fill-color: transparent;
   }
   
-  .highlight {
-    border-bottom: 4px solid #f5af19;
-  }
   
   @media screen and (max-width: 768px) {
     .hero__heading {
@@ -276,6 +269,16 @@
     width: 100%;
     max-width: 1300px;
     padding: 0 50px;
+  }
+
+  .main__container h2{
+    font-size: 1rem;
+    background: black;
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
   }
   
   .main__content {
@@ -381,21 +384,6 @@
     flex-direction: column;
     justify-content: center;
     color: #fff;
-    background: url('static/IMG_4201.JPG') no-repeat;
-    background-position: center;
-    background-size: cover;
-  }
-  
-  .main__img--profiles1 {
-    border-radius: 50%;
-    margin: 10px;
-    height: 150px;
-    width: 150px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    color: #fff;
-    background: url('static/Jay Picture.jpeg') no-repeat;
     background-position: center;
     background-size: cover;
   }
